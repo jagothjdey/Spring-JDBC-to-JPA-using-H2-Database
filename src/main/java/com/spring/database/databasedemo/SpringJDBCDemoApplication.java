@@ -14,7 +14,7 @@ import com.spring.database.databasedemo.jdbc.PersonJdbcDAO;
 import com.spring.database.databasedemo.jdbc.entity.Person;
 
 @SpringBootApplication
-public class DatabaseDemoApplication implements CommandLineRunner{
+public class SpringJDBCDemoApplication implements CommandLineRunner{
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
@@ -22,7 +22,7 @@ public class DatabaseDemoApplication implements CommandLineRunner{
 	PersonJdbcDAO dao;
 	
 	public static void main(String[] args) {
-		SpringApplication.run(DatabaseDemoApplication.class, args);
+		SpringApplication.run(SpringJDBCDemoApplication.class, args);
 	}
 
 	@Override

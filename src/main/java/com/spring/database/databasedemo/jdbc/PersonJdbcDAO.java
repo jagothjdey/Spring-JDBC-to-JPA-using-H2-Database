@@ -41,19 +41,19 @@ public class PersonJdbcDAO {
 
 	public Person findById(int id) {
 		Person queryForObject = jbdcTemplate.queryForObject("select * from person where id=?", new Object[] { id },
-				new BeanPropertyRowMapper<Person>(Person.class));
+				new PersonRowMapper());
 		return queryForObject;
 	}
 
 	public Person findByName(String name) {
 		Person queryForObject = jbdcTemplate.queryForObject("select * from person where name=?", new Object[] { name },
-				new BeanPropertyRowMapper<Person>(Person.class));
+				new PersonRowMapper());
 		return queryForObject;
 	}
 
 	public Person findByIDandName(int id, String name) {
 		Person queryForObject = jbdcTemplate.queryForObject("select * from person where id=? and name=?",
-				new Object[] { id, name }, new BeanPropertyRowMapper<Person>(Person.class));
+				new Object[] { id, name }, new PersonRowMapper());
 		return queryForObject;
 	}
 

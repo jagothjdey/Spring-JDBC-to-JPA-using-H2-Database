@@ -2,10 +2,27 @@ package com.spring.database.databasedemo.jdbc.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="person")
 public class Person {
+	
+	@Id
+	@GeneratedValue
 	private int id;
+	
+	@Column(name="name")
 	private String name;
+	
+	@Column(name="location")
 	private String location;
+	
+	@Column(name="birth_date")
 	private Date birthdate;
 	
 	
@@ -14,6 +31,14 @@ public class Person {
 	}
 	
 	public Person(int id, String name, String location, java.util.Date date) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.location = location;
+		this.birthdate = date;
+	}
+	
+	public Person(String name, String location, java.util.Date date) {
 		super();
 		this.id = id;
 		this.name = name;
