@@ -1,6 +1,6 @@
 package com.spring.database.databasedemo.jdbc.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Person {
 	private int id;
@@ -13,12 +13,12 @@ public class Person {
 		
 	}
 	
-	public Person(int id, String name, String location, Date birthdate) {
+	public Person(int id, String name, String location, java.util.Date date) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.location = location;
-		this.birthdate = birthdate;
+		this.birthdate = date;
 	}
 	
 	
