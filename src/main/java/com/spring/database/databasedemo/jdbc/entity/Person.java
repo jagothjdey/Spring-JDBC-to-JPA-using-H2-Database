@@ -6,10 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="person")
+@NamedQuery(name="find_all_persons",query="select p from Person p")
 public class Person {
 	
 	@Id
@@ -40,7 +42,6 @@ public class Person {
 	
 	public Person(String name, String location, java.util.Date date) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.location = location;
 		this.birthdate = date;
